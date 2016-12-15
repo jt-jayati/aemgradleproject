@@ -1,0 +1,39 @@
+
+
+buildscript {
+  repositories {
+   /* maven {
+      url "http://dl.bintray.com/twcable/aem"
+    }
+    maven { name = 'Defaults Plugin Repo'; url = 'http://dl.bintray.com/jmoore/java-lib' }*/
+    maven { name = 'Gradle Plugin Portal'; url = 'https://plugins.gradle.org/m2/' }
+    maven { url "http://repo.adobe.com/nexus/content/groups/public/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+  /*dependencies {
+    classpath "biz.aQute.bnd:biz.aQute.bnd.gradle:3.3.0"
+  }*/
+ /* dependencies {
+    classpath "com.twcable.gradle:gradle-plugin-scr:1.1.0"
+  }*/
+}
+
+allprojects  {
+
+  group = 'com.jt'
+version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'idea'
+  apply plugin: 'java'
+
+  repositories {
+    mavenLocal()
+    //maven { name = 'Defaults Plugin Repo'; url = 'http://dl.bintray.com/jmoore/java-lib' }
+    maven { name = 'Gradle Plugin Portal'; url = 'https://plugins.gradle.org/m2/' }
+    maven { url "http://repo.adobe.com/nexus/content/groups/public/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+}

@@ -1,0 +1,28 @@
+apply plugin : 'groovy'
+apply plugin : 'osgi'
+apply plugin : 'scr'
+apply plugin : 'bundletasks'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.8.1'
+    compile group: 'biz.aQute.bnd', name: 'biz.aQute.bndlib', version:'3.0.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.5.10'
+    compile group: 'org.apache.felix', name: 'org.apache.felix.scr.ant', version: '1.16.0'
+    compile group: 'javax.servlet', name: 'servlet-api', version:'2.5'
+    compile group: 'javax.jcr', name: 'jcr', version:'2.0'
+    compile group: 'org.apache.sling', name: 'org.apache.sling.api', version:'2.2.0'
+    compile group: 'org.apache.sling', name: 'org.apache.sling.jcr.api', version:'2.1.0'
+}
+
+
+jar {
+    manifest { // the manifest of the default jar is of type OsgiManifest
+        name = 'My maven Project Bundle'
+        instruction 'Bundle-Vendor', 'JT'
+        instruction 'Bundle-Description', 'Maven Multimodule project for AEM Project.'
+        //instruction 'Service-Component', 'OSGI-INF/**'
+        instruction 'Import-Package', '*'
+    }
+}
