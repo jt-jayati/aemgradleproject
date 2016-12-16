@@ -32,12 +32,20 @@ class BundleTasksPlugin implements Plugin<Project>{
             AemPluginUtil.sendCurlRequest(path,project.jar.manifest.symbolicName,'uninstall')
         }
 
-        // TO DO task for bundle's start verification
-        // TO DO other bundles are all up or not
-/*
-        Task dummytask = project.task([group: "CQ Plugins"],"dummyTask"){
-            println curlRequestStr
-            println curlRequestStr.execute()
-        }*/
+        Task checkIfBundleActive = project.task([group: "CQ Plugins", dependsOn: "startBundleTask"],'checkIfBundleActive'){
+            def curlStr = 'curl -u admin:admin http://localhost:4502${path}${project.jar.manifest.symbolicName}.json'
+            curlStr.execute()
+            //process.waitFor()
+            //println process.err.text
+        }
+
+        Task verifyBundles = project.task([group: "CQ Plugins"],'verifyBundles'){
+            def curlStr = 'curl -u admin:admin http://localhost:4502/system/console/bundles.json'
+            curlStr.execute()
+           // process.waitFor()
+            //println process.err.text
+
+        }
+
     }
 }

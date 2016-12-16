@@ -6,7 +6,7 @@ This a content package project generated using the multimodule-content-package-a
 Building
 --------
 
-This project uses Maven for building. Common commands:
+This project uses Gradle for building. Common commands:
 
 From the root directory, run ``gradlew uploadPackageTask`` to build the bundle and content package and install to a CQ instance.
 
@@ -28,3 +28,15 @@ Specifying CRX Host/Port -TO DO
 The CRX host and port can be specified on the command line with:
 
 
+TO DO:
+
+creating template projects and using template/archetype plugins available
+using custom init.gradle in init.d 		https://docs.gradle.org/current/userguide/init_scripts.html
+
+ to check curl responses in groovy
+ to nclude other dependencies
+ test this build for various exsting projects
+ try above 2 for providing functionality like archetype
+ create plugins neatly using  https://docs.gradle.org/current/userguide/javaGradle_plugin.html
+ create bundle package along with filter.xml
+ 

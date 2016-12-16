@@ -34,9 +34,7 @@ class ProcessSCR implements Plugin<Project> {
                 serviceComponents += file.path.substring(index).replace("\\", "/") + ", "
             }
             serviceComponents = serviceComponents.substring(0, serviceComponents.length() - 2)//remove final ", "
-            //println serviceComponents
             project.tasks.getByName('jar').manifest.instruction('Service-Component', serviceComponents)
-            //project.extensions.add("serviceComponents", serviceComponents)
         }
         final jarTask = project.tasks.findByPath("jar").dependsOn packageSCRTask
     }
