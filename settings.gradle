@@ -1,6 +1,6 @@
-rootProject.name = 'myproject'
-include ':myproject-bundle'
-include ':myproject-content'
+rootProject.name = projectName
+include ':'+rootProject.name+'-bundle'
+include ':'+rootProject.name+'-content'
 
-project(':myproject-bundle').projectDir = "$rootDir/bundle" as File
-project(':myproject-content').projectDir = "$rootDir/content" as File
+project(':'+rootProject.name+'-bundle').projectDir = "$rootDir/bundle" as File
+project(':'+rootProject.name+'-content').projectDir = "$rootDir/content" as File
