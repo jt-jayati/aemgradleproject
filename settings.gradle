@@ -1,6 +1,6 @@
-rootProject.name = 'aemgradleproject'
-include ':aemgradleproject-bundle'
-include ':aemgradleproject-content'
+rootProject.name = 'myproject'
+include ':myproject-bundle'
+include ':myproject-content'
 
-project(':aemgradleproject-bundle').projectDir = "$rootDir/bundle" as File
-project(':aemgradleproject-content').projectDir = "$rootDir/content" as File
+project(':myproject-bundle').projectDir = "$rootDir/bundle" as File
+project(':myproject-content').projectDir = "$rootDir/content" as File

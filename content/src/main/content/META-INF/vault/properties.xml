@@ -6,8 +6,8 @@
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="dependencies" />
 <entry key="packageFormatVersion">2</entry>
-<entry key="description">AEM Project Package</entry>
-<entry key="group">jt</entry>
-<entry key="name">aemgradleproject-content</entry>
-<entry key="path">/etc/packages/jt/aemgradleproject-content-1.0-SNAPSHOT.zip</entry>
+<entry key="description">My Project Package</entry>
+<entry key="group">TTN</entry>
+<entry key="name">myproject-content</entry>
+<entry key="path">/etc/packages/TTN/myproject-content-1.0-SNAPSHOT.zip</entry>
 </properties>
