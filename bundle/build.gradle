@@ -20,8 +20,8 @@ dependencies {
 jar {
     manifest { // the manifest of the default jar is of type OsgiManifest
         name = 'AEM Project Bundle'
-        instruction 'Bundle-Vendor', 'JT'
-        instruction 'Bundle-Description', 'Maven Multimodule project for AEM Project.'
+        instruction 'Bundle-Vendor', 'TTN'
+        instruction 'Bundle-Description', 'Multimodule project for AEM Project.'
         instruction 'Import-Package', '*'
     }
 }
