@@ -1,6 +1,10 @@
-rootProject.name = 'aemgradleproject'
-include ':aemgradleproject-bundle'
-include ':aemgradleproject-content'
+    if(properties.containsKey('rootProjectName')){
+        rootProject.name = "${rootProjectName}"
+        include ':'+rootProject.name+'-bundle'
+        include ':'+rootProject.name+'-content'
 
-project(':aemgradleproject-bundle').projectDir = "$rootDir/bundle" as File
-project(':aemgradleproject-content').projectDir = "$rootDir/content" as File
+        project(':'+rootProject.name+'-bundle').projectDir = "$rootDir/bundle" as File
+        project(':'+rootProject.name+'-content').projectDir = "$rootDir/content" as File
+    }else{
+        println 'Please Specify Project name in place of "${rootProjectName}" in settings.gradle file in project root directory'
+    }
