@@ -1,4 +1,4 @@
-package com.jt.impl;
+package com.ttn.impl;
 
 import javax.jcr.Repository;
 
@@ -7,7 +7,7 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.jcr.api.SlingRepository;
 
-import com.jt.HelloService;
+import com.ttn.HelloService;
 
 /**
  * One implementation of the {@link HelloService}. Note that

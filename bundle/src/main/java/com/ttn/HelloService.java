@@ -1,4 +1,4 @@
-package com.jt;
+package com.ttn;
 
 /**
  * A simple service interface
