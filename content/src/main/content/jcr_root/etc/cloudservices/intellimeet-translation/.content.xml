@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-01-10T16:53:07.216+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/intellimeet-translation-connector/templates/intellimeet-connector-servicepage"
+        jcr:description="Intellimeet translation connector desciption"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Intellimeet Connector"
+        sling:resourceType="cq/cloudserviceconfigs/components/servicepage"
+        allowMultiple="{Boolean}true"
+        description="Translate with Intellimeet Connector."
+        descriptionExtended="Intellimeet Connector description extended."
+        inclusionRank="{Long}202"
+        ranking="10"
+        thumbnailPath="/apps/intellimeet-translation-connector/templates/intellimeet-connector-servicepage/thumbnail.png"/>
+</jcr:root>

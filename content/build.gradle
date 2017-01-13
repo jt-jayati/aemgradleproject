@@ -1,7 +1,10 @@
-description = 'AEM Project Package'
+description = 'AEM Intellimeet Connector Package'
+dependencies {
+    compile project(':intellimeet-translation-connector-bundle')
+}
 
 project.ext {
-    installPath = "jcr_root/apps/aemgradleproject/install"
+    installPath = "jcr_root/apps/intellimeet-translation-connector/install"
 }
 apply plugin : 'packageTask'
 apply plugin : 'uploadandinstall'

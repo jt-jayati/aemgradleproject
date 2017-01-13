@@ -3,11 +3,11 @@
 <properties>
 <comment>FileVault Package Properties</comment>
 <entry key="buildCount">1</entry>
-<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="version">1.0</entry>
 <entry key="dependencies" />
 <entry key="packageFormatVersion">2</entry>
-<entry key="description">AEM Project Package</entry>
-<entry key="group">jt</entry>
-<entry key="name">aemgradleproject-content</entry>
-<entry key="path">/etc/packages/jt/aemgradleproject-content-1.0-SNAPSHOT.zip</entry>
+<entry key="description">AEM Intellimeet Connector Package</entry>
+<entry key="group">AEM Intellimeet</entry>
+<entry key="name">aem-intellimeet-connector-content</entry>
+<entry key="path">/etc/packages/AEM Intellimeet/aem-intellimeet-connector-content-1.0.zip</entry>
 </properties>

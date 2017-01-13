@@ -10,7 +10,6 @@ class ProcessSCR implements Plugin<Project> {
     @Override
     void apply(Project project) {
         project.ant.properties.classes = project.sourceSets.main.output.classesDir
-
         Task processSCRTask = project.task([description: "Processes SCR annoations from source", group: "CQ Plugins", dependsOn: "compileGroovy"], 'processSCRAnnotations')
         processSCRTask.doLast{
                 if (!project.ant.properties.classes) {
@@ -33,7 +32,7 @@ class ProcessSCR implements Plugin<Project> {
                 def index = file.path.indexOf("OSGI-INF")
                 serviceComponents += file.path.substring(index).replace("\\", "/") + ", "
             }
-            serviceComponents = serviceComponents.substring(0, serviceComponents.length() - 2)//remove final ", "
+            serviceComponents = serviceComponents.substring(0, serviceComponents.length() - 2)//removes final ", "
             project.tasks.getByName('jar').manifest.instruction('Service-Component', serviceComponents)
         }
         final jarTask = project.tasks.findByPath("jar").dependsOn packageSCRTask

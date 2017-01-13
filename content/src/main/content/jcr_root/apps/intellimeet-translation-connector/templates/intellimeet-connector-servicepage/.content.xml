@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Account settings for the Intellimeet Translation Connector"
+    jcr:primaryType="cq:Template"
+    jcr:title="Intellimeet Translation connector configuration"
+    sling:resourceSuperType="cq/cloudserviceconfigs/templates/configpage"
+    allowedChildren="[/apps/intellimeet-translation-connector/templates/intellimeet-connector-servicepage]"
+    allowedPaths="[/etc/cloudservices/intellimeet-translation(/.*)?]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:cloudservicename="intellimeet-translation"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="intellimeet-translation-connector/components/intellimeet-connector-cloudconfig"/>
+</jcr:root>

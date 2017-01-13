@@ -8,7 +8,7 @@ buildscript {
 
 allprojects  {
 
-  group = 'com.jt'
+  group = 'com.ttn.intellimeet'
 version = '1.0-SNAPSHOT'
 }
 

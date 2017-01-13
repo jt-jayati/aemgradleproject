@@ -1,6 +1,6 @@
-rootProject.name = 'aemgradleproject'
-include ':aemgradleproject-bundle'
-include ':aemgradleproject-content'
+rootProject.name = 'intellimeet-translation-connector'
+include ':intellimeet-translation-connector-bundle'
+include ':intellimeet-translation-connector-content'
 
-project(':aemgradleproject-bundle').projectDir = "$rootDir/bundle" as File
-project(':aemgradleproject-content').projectDir = "$rootDir/content" as File
+project(':intellimeet-translation-connector-bundle').projectDir = "$rootDir/bundle" as File
+project(':intellimeet-translation-connector-content').projectDir = "$rootDir/content" as File
