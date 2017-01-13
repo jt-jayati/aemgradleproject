@@ -13,7 +13,7 @@ class PackageUploadInstall implements Plugin<Project> {
     void apply(Project project) {
 
         Task uploadPackageTask = project.task([group: "CQ Plugins",dependsOn: "createPackage"],'uploadPackageTask'){
-            AemPluginUtil.installPackageViaCurl(project.tasks.findByName("createPackage").archivePath.toString())
+            AemPluginUtil.installPackageViaCurl(project , project.tasks.findByName("createPackage").archivePath.toString())
         }
     }
 }
