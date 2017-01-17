@@ -7,12 +7,6 @@ import org.gradle.api.Project
  */
 public class AemPluginUtil {
 
-    /*static String server = "localhost"
-    static String port = "4502"
-    static String username = "admin"
-    static String password = "admin"*/
-    //ServerConfig sConfig
-
     static void sendCurlRequest(Project project, String path,String bundleSymbolicName, String action){
         ServerConfig.setServerConfig(project)
         final curlRequestStr = "curl -u ${ServerConfig.username}:${ServerConfig.password} -F action=${action} http://${ServerConfig.server}:${ServerConfig.port}${path} ${bundleSymbolicName}"
@@ -25,8 +19,4 @@ public class AemPluginUtil {
         installRequestStr.execute()
     }
 
-   /* static void setServerConfig(Project project){
-        ServerConfig sConfig = new ServerConfig(project)
-    }
-*/
 }

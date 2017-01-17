@@ -13,10 +13,10 @@ class ServerConfig {
     private static String password = "admin"
 
     static void setServerConfig(Project project) {
-        server = project.properties.containsKey('server')?:server
-        port = project.properties.containsKey('port')?:port
-        username = project.properties.containsKey('username')?:username
-        password = project.properties.containsKey('password')?:password
+        server = project.properties.containsKey('server')?project.properties.get('server'):server
+        port = project.properties.containsKey('port')? project.properties.get('port'):port
+        username = project.properties.containsKey('username')?project.properties.get('username'):username
+        password = project.properties.containsKey('password')?project.properties.get('password'):password
     }
 
     static String getServer() {

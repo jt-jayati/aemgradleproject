@@ -1,4 +1,4 @@
-package com.jt;
+package com.ttn;
 
 import static org.junit.Assert.*;
 

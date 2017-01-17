@@ -1,13 +1,13 @@
-package com.jt;
+package com.ttn;
 
 /**
  * A simple service interface
  */
-public interface HelloService {
+public interface AnotherService {
     
     /**
      * @return the name of the underlying JCR repository implementation
      */
-    public String getRepositoryName();
+    public String getFirstService();
 
 }

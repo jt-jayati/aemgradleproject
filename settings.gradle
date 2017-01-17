@@ -1,4 +1,4 @@
-rootProject.name = projectName
+rootProject.name = 'myproject'
 include ':'+rootProject.name+'-bundle'
 include ':'+rootProject.name+'-content'
 

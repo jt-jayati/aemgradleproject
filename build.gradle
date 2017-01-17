@@ -8,8 +8,8 @@ buildscript {
 
 allprojects  {
 
-  group = 'com.jt'
-version = '1.0-SNAPSHOT'
+  group = 'com.ttn'
+  version = '1.0.0'
 }
 
 subprojects {

@@ -3,12 +3,12 @@
 <div>
 <%= properties.get("title", currentPage.getTitle()) %>
 </div>
-  <% com.jt.HelloService firstService = sling.getService(com.jt.HelloService.class);
+  <% com.ttn.HelloService firstService = sling.getService(com.ttn.HelloService.class);
 %>
 <div>
 This page invokes the AEM KeyService
 </div>
 <div>
    
-The value of the key is: <%=firstService.getRepositoryName()%>
+The value of the key is: <%=firstService.getName()%>
 </div>
