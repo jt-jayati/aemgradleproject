@@ -1,4 +1,4 @@
-My AEM Project in Gradle
+AEM Project using Gradle
 ========
 
 This a content package project generated using the multimodule-content-package-archetype.
