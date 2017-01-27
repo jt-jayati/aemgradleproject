@@ -11,7 +11,7 @@ class ProcessSCR implements Plugin<Project> {
     void apply(Project project) {
         project.ant.properties.classes = project.sourceSets.main.output.classesDir
 
-        Task processSCRTask = project.task([description: "Processes SCR annoations from source", group: "CQ Plugins", dependsOn: "compileGroovy"], 'processSCRAnnotations')
+        Task processSCRTask = project.task([description: "Processes SCR annoations from source", group: "AEM Plugins", dependsOn: "compileGroovy"], 'processSCRAnnotations')
         processSCRTask.doLast{
                 if (!project.ant.properties.classes) {
                     println "No Java/Groovy classes found"
@@ -21,7 +21,7 @@ class ProcessSCR implements Plugin<Project> {
                 project.ant.scr(srcdir: project.ant.properties.classes, destdir: project.ant.properties.classes, classpath: project.configurations.compile.asPath, scanClasses: true)
             }
 
-        Task packageSCRTask = project.task([description: "Injects SCR metafiles into package's OSGI-INF", group: "CQ Plugins", dependsOn: "processSCRAnnotations"], 'packageSCRAnnotations') {
+        Task packageSCRTask = project.task([description: "Injects SCR metafiles into package's OSGI-INF", group: "AEM Plugins", dependsOn: "processSCRAnnotations"], 'packageSCRAnnotations') {
             def tree = project.fileTree(dir: new File(project.ant.properties.classes, '/OSGI-INF'), include: "**/*.xml", exclude: "**/metatype/**")
             def serviceComponents = ""
             if (tree.isEmpty()) {

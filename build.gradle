@@ -9,7 +9,7 @@ buildscript {
 allprojects  {
 
   group = 'com.ttn'
-  version = '1.0-SNAPSHOT'
+  version = '1.0'
 }
 
 subprojects {

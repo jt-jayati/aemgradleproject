@@ -19,20 +19,4 @@ class ServerConfig {
         password = project.properties.containsKey('password')?project.properties.get('password'):password
     }
 
-    static String getServer() {
-        server
-    }
-
-    static String getPort() {
-        port
-    }
-
-    static String getUsername() {
-        username
-    }
-
-    static String getPassword() {
-        password
-    }
-
 }

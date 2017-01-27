@@ -12,8 +12,12 @@ class PackageUploadInstall implements Plugin<Project> {
     @Override
     void apply(Project project) {
 
-        Task uploadPackageTask = project.task([group: "CQ Plugins",dependsOn: "createPackage"],'uploadPackageTask'){
-            AemPluginUtil.installPackageViaCurl(project , project.tasks.findByName("createPackage").archivePath.toString())
+        project.tasks.create('uploadPackageTask').with {
+            group: "AEM Plugins"
+            doLast{
+                CurlTasksUtil.installPackage(project)
+            }
         }
+
     }
 }

@@ -1,4 +1,4 @@
-rootProject.name = 'myproject'
+rootProject.name = 'aemgradleproject'
 include ':'+rootProject.name+'-bundle'
 include ':'+rootProject.name+'-content'
 

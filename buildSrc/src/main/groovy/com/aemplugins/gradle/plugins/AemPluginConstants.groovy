@@ -5,10 +5,8 @@ package com.aemplugins.gradle.plugins;
  */
 public class AemPluginConstants {
 
-    static final String BUNDLE_CONSOLE_PATH = "/system/console/bundles/"
+    static final String BUNDLE_CONSOLE_PATH = "/system/console/bundles"
 
-    static final String PACKAGE_MANAGER_PATH = "/crx/pkgmgr"
-
-
+    static final String PACKAGE_MANAGER_PATH = "/crx/packmgr/service"
 
 }

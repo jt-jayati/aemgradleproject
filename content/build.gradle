@@ -1,7 +1,8 @@
 description = 'AEM Project Package'
 /* uncomment in case your app folder name differs from project name
 project.ext {
-    installPath = "jcr_root/apps/myproject/install"
+    installPath = "jcr_root/apps/aemgradleproject/install"
 }*/
+version = '1.0-SNAPSHOT'
 apply plugin : 'packageTask'
 apply plugin : 'uploadandinstall'
