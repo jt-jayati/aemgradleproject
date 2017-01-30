@@ -13,16 +13,16 @@ This project uses Gradle for building. Common commands:
 
 AEM Plugins tasks
 -----------------
-<b>checkBundlesTask </b>- Task to check the bundle status in AEM Felix Console<br>
-<b>createPackage </b>- Creates AEM package with content and bundle<br>
-<b>installBundleTask </b>- Task to install the project bundle to AEM Felix Console<br>
-<b>packageSCRAnnotations </b>- Injects SCR metafiles into package's OSGI-INF<br>
-<b>processSCRAnnotations </b>- Processes SCR annoations from source<br>
-<b>refreshBundlesTask </b>- Task to refresh all the bundles in AEM Felix Console<br>
-<b>startBundleTask </b>- Task to start the project bundle in AEM Felix Console<br>
-<b>stopBundleTask </b>- Task to stop the project bundle in AEM Felix Console<br>
-<b>uninstallBundleTask </b>- Task to uninstall the project bundle from AEM Felix Console<br>
-<b>uploadPackageTask </b>- Task to upload and install the AEM package server<br>
+<i>checkBundlesTask </i>- Task to check the bundle status in AEM Felix Console<br>
+<i>createPackage </i>- Creates AEM package with content and bundle<br>
+<i>installBundleTask </i>- Task to install the project bundle to AEM Felix Console<br>
+<i>packageSCRAnnotations </i>- Injects SCR metafiles into package's OSGI-INF<br>
+<i>processSCRAnnotations </i>- Processes SCR annoations from source<br>
+<i>refreshBundlesTask </i>- Task to refresh all the bundles in AEM Felix Console<br>
+<i>startBundleTask </i>- Task to start the project bundle in AEM Felix Console<br>
+<i>stopBundleTask </i>- Task to stop the project bundle in AEM Felix Console<br>
+<i>uninstallBundleTask </i>- Task to uninstall the project bundle from AEM Felix Console<br>
+<i>uploadPackageTask </i>- Task to upload and install the AEM package server<br>
 
 
 Developing with this Repo
