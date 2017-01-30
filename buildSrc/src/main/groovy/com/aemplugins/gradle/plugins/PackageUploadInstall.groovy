@@ -13,7 +13,8 @@ class PackageUploadInstall implements Plugin<Project> {
     void apply(Project project) {
 
         project.tasks.create('uploadPackageTask').with {
-            group: "AEM Plugins"
+            group = "AEM Plugins"
+            description = "Task to upload and install the AEM package server"
             doLast{
                 CurlTasksUtil.installPackage(project)
             }

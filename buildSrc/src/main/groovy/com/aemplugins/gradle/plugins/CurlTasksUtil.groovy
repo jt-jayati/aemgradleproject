@@ -1,6 +1,7 @@
 package com.aemplugins.gradle.plugins;
 
 import org.gradle.api.Project
+import org.json.JSONObject
 
 /**
  * Created by jayati on 11/30/2016.
@@ -24,6 +25,7 @@ public class CurlTasksUtil {
         ServerConfig.setServerConfig(project)
         def curlStr = "curl -u ${ServerConfig.username}:${ServerConfig.password} http://${ServerConfig.server}:${ServerConfig.port}${path}/${project.jar.manifest.symbolicName}.json"
         processRequest(curlStr)
+
     }
 
     static void installBundleRequest(project, path){
@@ -33,7 +35,16 @@ public class CurlTasksUtil {
     }
 
     static void processRequest(final String curlRequestStr){
+
         Process process = curlRequestStr.execute()
-        println process.text.eachLine {println it}
+        def response= process.text
+        if(response.startsWith("{")){
+            JSONObject jsonResponse = new JSONObject(response)
+            println jsonResponse.has("status") ? jsonResponse.status:""
+        }
+       else if(response.startsWith("<")){
+            def xmlResponse = new XmlSlurper().parseText(response)
+            println xmlResponse.body
+        }
     }
 }

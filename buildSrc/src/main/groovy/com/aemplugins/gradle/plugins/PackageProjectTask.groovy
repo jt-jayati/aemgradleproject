@@ -16,7 +16,7 @@ class PackageProjectTask implements Plugin<Project> {
         String defaultInstallPath = "jcr_root/apps/"+project.archivesBaseName-"-content"+"/install"
         def osgiModules = project.parent.childProjects.findAll {it.value.plugins.findPlugin('osgi')}
 
-        Task createPackage =project.task([group: "AEM Plugins", type: Zip],"createPackage"){
+        Task createPackage =project.task([group: "AEM Plugins",description: "Creates AEM package with content and bundle", type: Zip],"createPackage"){
             // copy task for jcr_root content
                 from 'src/main/content'
             // copy task for bundles into install folder

@@ -1,7 +1,7 @@
 apply plugin : 'groovy'
 apply plugin : 'osgi'
-apply plugin : 'scr'
-apply plugin : 'bundletasks'
+apply plugin : 'com.ttn.generatedescriptor'
+apply plugin : 'com.ttn.bundletasks'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

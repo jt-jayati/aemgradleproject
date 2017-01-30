@@ -8,9 +8,21 @@ Building
 
 This project uses Gradle for building. Common commands:
 
-./gradlew  build 
-./gradlew uploadPackageTask
+<b>./gradlew build </b> to build the project bundle and content zip<br> 
+<b>./gradlew uploadPackageTask</b> to upload and install AEM package zip on AEM server
 
+AEM Plugins tasks
+-----------------
+<b>checkBundlesTask </b>- Task to check the bundle status in AEM Felix Console<br>
+<b>createPackage </b>- Creates AEM package with content and bundle<br>
+<b>installBundleTask </b>- Task to install the project bundle to AEM Felix Console<br>
+<b>packageSCRAnnotations </b>- Injects SCR metafiles into package's OSGI-INF<br>
+<b>processSCRAnnotations </b>- Processes SCR annoations from source<br>
+<b>refreshBundlesTask </b>- Task to refresh all the bundles in AEM Felix Console<br>
+<b>startBundleTask </b>- Task to start the project bundle in AEM Felix Console<br>
+<b>stopBundleTask </b>- Task to stop the project bundle in AEM Felix Console<br>
+<b>uninstallBundleTask </b>- Task to uninstall the project bundle from AEM Felix Console<br>
+<b>uploadPackageTask </b>- Task to upload and install the AEM package server<br>
 
 
 Developing with this Repo
